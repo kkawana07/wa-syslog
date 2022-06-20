@@ -1,7 +1,7 @@
 {
-    "name": "Syslog-2",
-    "id": "syslog-2",
-    "version": "0.2",
+    "name": "Syslog-3",
+    "id": "syslog-3",
+    "version": "0.3",
     "mapping": "Syslog Default Mappings",
     "types": [
         "alerts",
