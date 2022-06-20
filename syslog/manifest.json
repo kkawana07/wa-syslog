@@ -2,7 +2,7 @@
     "name": "Syslog-1",
     "id": "syslog-1",
     "version": "0.1",
-    "mapping": "Syslog Default Mappings -1",
+    "mapping": "Syslog Default Mappings",
     "types": [
         "alerts",
         "events",
@@ -11,8 +11,8 @@
     "description": "This plugin is used to ingest data to SIEM platform. To access the plugin, you would need the credentials of SIEM platform .",
     "configuration": [
         {
-            "label": "Syslog Server-1",
-            "key": "syslog_server-1",
+            "label": "Syslog Server",
+            "key": "syslog_server",
             "type": "text",
             "default": "",
             "mandatory": true,
