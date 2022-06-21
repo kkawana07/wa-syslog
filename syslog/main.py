@@ -145,10 +145,10 @@ class SyslogPlugin(PluginBase):
                 # Handle variable mappings
                 if (
                     isinstance(headers[cef_header], str)
-                    and headers[cef_header].lower() in mapping_variables
+                    and headers[cef_header].() in mapping_variables
                 ):
                     headers[cef_header] = mapping_variables[
-                        headers[cef_header].lower()
+                        headers[cef_header].()
                     ]
             except FieldNotFoundError as err:
                 missing_fields.append(str(err))
