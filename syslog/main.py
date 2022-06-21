@@ -109,7 +109,7 @@ class SyslogPlugin(PluginBase):
         Returns:
             Fetched mapping JSON object
         """
-        mappings = {k.lower(): v for k, v in mappings.items()}
+        mappings = {k.upper(): v for k, v in mappings.items()}
         if subtype.upper() in mappings:
             return mappings[subtype.upper()]
         else:
