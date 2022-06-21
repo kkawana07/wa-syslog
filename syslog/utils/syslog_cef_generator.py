@@ -297,7 +297,7 @@ class CEFGenerator(object):
             if date:
                 extension_strs["rt"] = date
 
-        extensions_str = " ".join(
+        extensions_str = ",".join(
             sorted("\"{}={}\"".format(k, v) for k, v in extension_strs.items())
         )
 
