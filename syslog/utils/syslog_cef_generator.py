@@ -298,11 +298,11 @@ class CEFGenerator(object):
                 extension_strs["rt"] = date
 
         extensions_str = ",".join(
-            f'\"{k}={v}\"' for k, v in extension_strs.items()
+            f'\"{k}"="{v}\"' for k, v in extension_strs.items()
         )
 
         # Append extension string
-        cef_components.append(sorted(extensions_str, reverse=True))
+        cef_components.append(extensions_str)
 
         # Join every CEF component with given delimiter
         return self.delimiter.join(cef_components)
