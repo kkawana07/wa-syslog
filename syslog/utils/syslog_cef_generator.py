@@ -204,7 +204,7 @@ class CEFGenerator(object):
             headers: Headers of CEF event
             extensions (dict): key-value pairs for event metadata.
         """
-        extension_strs = "{}"
+        extension_strs = '"{}"'
         for name, value in extensions.items():
 
             # First convert the incoming value from Netskope to appropriate data type
