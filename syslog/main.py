@@ -110,10 +110,10 @@ class SyslogPlugin(PluginBase):
             Fetched mapping JSON object
         """
         mappings = {k: v for k, v in mappings.items()}
-        if subtype.lower() in mappings:
-            return mappings[subtype.lower()]
+        if subtype() in mappings:
+            return mappings[subtype()]
         else:
-            return mappings[subtype.upper()]
+            return mappings[subtype()]
 
     def get_headers(self, header_mappings, data, data_type, subtype):
         """To Create a dictionary of CEF headers from given header mappings for given Netskope alert/event record.
