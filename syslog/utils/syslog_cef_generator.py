@@ -63,7 +63,7 @@ class CEFGenerator(object):
             "[^\r\n]*", escape_chars=delimiter
         )
         self._prefix_field_float_sanitizer = float_sanitizer()
-        self._equals_escaper = escaper("=")
+        self._equals_escaper = escaper("\"=\"")
         self._severity_sanitizer = str_sanitizer(
             "Unknown|Low|Medium|High|Very-High"
         )
