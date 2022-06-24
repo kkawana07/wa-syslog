@@ -109,11 +109,11 @@ class SyslogPlugin(PluginBase):
         Returns:
             Fetched mapping JSON object
         """
-        mappings = {k : v for k, v in mappings.items()}
-        if subtype() in mappings:
-            return mappings[subtype()]
+        mappings = {k.lower(): v for k, v in mappings.items()}
+        if subtype.lower() in mappings:
+            return mappings[subtype.lower()]
         else:
-            return mappings[subtype()]
+            return mappings[subtype.upper()]
 
     def get_headers(self, header_mappings, data, data_type, subtype):
         """To Create a dictionary of CEF headers from given header mappings for given Netskope alert/event record.
@@ -145,10 +145,10 @@ class SyslogPlugin(PluginBase):
                 # Handle variable mappings
                 if (
                     isinstance(headers[cef_header], str)
-                    and headers[cef_header]() in mapping_variables
+                    and headers[cef_header].lower() in mapping_variables
                 ):
                     headers[cef_header] = mapping_variables[
-                        headers[cef_header]()
+                        headers[cef_header].lower()
                     ]
             except FieldNotFoundError as err:
                 missing_fields.append(str(err))
