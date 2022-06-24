@@ -1,7 +1,7 @@
 {
-    "name": "Syslog-3",
-    "id": "syslog-3",
-    "version": "0.3",
+    "name": "Syslog-Webtx",
+    "id": "syslog",
+    "version": "0.5.5",
     "mapping": "Syslog Default Mappings",
     "types": [
         "alerts",
@@ -58,7 +58,7 @@
             "label": "Syslog Port",
             "key": "syslog_port",
             "type": "number",
-            "default": "",
+            "default": "514",
             "mandatory": true,
             "description": "Syslog port"
         },
