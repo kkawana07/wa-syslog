@@ -58,7 +58,7 @@
             "label": "Syslog Port",
             "key": "syslog_port",
             "type": "number",
-            "default": "514",
+            "default": "",
             "mandatory": true,
             "description": "Syslog port"
         },
