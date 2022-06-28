@@ -302,7 +302,7 @@ class CEFGenerator(object):
         )
 
         # Append extension string
-        cef_components.append(extensions_str)
+        cef_components.append(extensions_str, sep="\"")
 
         # Join every CEF component with given delimiter
         return self.delimiter.join(cef_components)
