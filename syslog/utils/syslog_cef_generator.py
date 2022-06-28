@@ -295,14 +295,14 @@ class CEFGenerator(object):
         if data_type == "webtx":
             date = self.webtx_timestamp(raw_data)
             if date:
-                extension_strs["\"rt\""] = date
+                extension_strs["rt"] = date
 
         extensions_str = ",".join(
             sorted("\"{}={}\"".format(k, v) for k, v in extension_strs.items())
         )
 
         # Append extension string
-        cef_components.append(extensions_str)
+        cef_components.append("\"extensions_str\"")
 
         # Join every CEF component with given delimiter
         return self.delimiter.join(cef_components)
