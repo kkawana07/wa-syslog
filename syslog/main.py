@@ -167,7 +167,7 @@ class SyslogPlugin(PluginBase):
         Returns:
             extensions (dict)
         """
-        extension = {}
+        extension = "\"{}\""
         missing_fields = []
 
         # Iterate over mapped extensions
