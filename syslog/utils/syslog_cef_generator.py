@@ -298,7 +298,7 @@ class CEFGenerator(object):
                 extension_strs["rt"] = date
 
         extensions_str = ",".join(
-            reversed("{}={}".format(k, v) for k, v in extension_strs.items())
+            sorted("{}={}".format(k, v) for k, v in extension_strs.items())
         )
 
         # Append extension string
