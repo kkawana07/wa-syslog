@@ -223,7 +223,7 @@ class SyslogPlugin(PluginBase):
                 # If mapping field specified by JSON path is present in data, map that field, else skip by raising
                 # exception:
                 value = self.get_mapping_value_from_json_path(
-                    data, extension_mapping["\"mapping_field\""]
+                    data, extension_mapping["mapping_field"]
                 )
                 if value:
                     return ",".join([str(val) for val in value])
